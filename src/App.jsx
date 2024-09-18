@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import AnimatedBrandName from './Components/AnimatedBrandName';
+import Header from './Components/Header';
+import Nav from './Components/Nav';
+import IntroText from './Components/IntroText';
 
 function App() {
   const menuItems = ['Intro' , 'Projects' , 'Value' , 'Background','About', 'Contact'];
@@ -32,43 +34,15 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen">
-        <div id="grid-container" className='grid grid-cols-1 md:grid-cols-[200px,1fr] grid-rows-[auto,1fr] h-screen bg-slate-800 '>
+      <div className="min-h-screen font-title">
+        <div id="grid-container" className='grid grid-cols-1 md:grid-cols-[200px,1fr] grid-rows-[auto,1fr] h-screen bg-black '>
+          <Header/>
 
-          <header className=' col-span-2 h-24 text-3xl border-2 border-red-500 font-bold text-cyan-400'>
+          <Nav menuItems={menuItems}/>
 
-            <div className='flex flex-wrap px-4 py-9 border-2  border-green-400'>
-              <AnimatedBrandName firstName={'Atharv'} lastName={' Singh'}/>
-            </div>
+          <IntroText activeTopMenu={activeTopMenu} setActiveTopMenu={setActiveTopMenu} topMenuItems={topMenuItems} content={content}/>
 
-          </header>
 
-          <aside className=' inset-y-0 left-0 font-16px mt-6 border-2 border-red-500 font-bold text-black'>
-            <div>
-              Navigation
-              <ul className="mt-4 px-4 space-y-2">
-                {menuItems.map((item) => <div className='border-2 border-green-400 text-white'key={item}>{item}</div>)}
-              </ul>
-            </div>
-          </aside>
-          <main className=" inset-y-0 right-0 mt-6 border-2 border-red-500 font-bold text-white">
-            <div id="intro-text" className='flex flex-wrap mt-10 mx-16 border-2 border-green-400'>
-            {topMenuItems.map((item) => (
-              <div
-                key={item}
-                className={`cursor-pointer mr-8 mb-4 font-16px ${activeTopMenu === item ? 'font-bold' : 'opacity-50'}`}
-                onClick={() => setActiveTopMenu(item)}
-              >
-                {item}
-              </div>
-            ))}
-            </div>
-            <div id="content" className='flex-grow text-[70px] mx-16 border-2 border-green-400'>
-              {content[activeTopMenu].description.split('. ').map((text,index) => (
-                <h1 key={index} className='-mb-10'>{text.trim()}</h1>
-              ))}
-              </div>
-          </main>
         </div>
       </div>
     </>
