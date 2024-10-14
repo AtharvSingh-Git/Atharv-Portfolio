@@ -1,7 +1,9 @@
-const Introtext = ( {activeTopMenu , setActiveTopMenu , topMenuItems , content}) =>{
-    return(
-        <main className=" inset-y-0 right-0 mt-6 border-2 border-red-500 font-bold text-white">
-        <div id="intro-text" className='flex flex-wrap mt-10 mx-16 border-2 border-green-400'>
+import Arrow from './Arrow';
+
+const IntroText = ({ activeTopMenu, setActiveTopMenu, topMenuItems, content }) => {
+  return (
+    <div className="h-screen pt-24 pl-[200px] text-white"> {/* Add padding to account for fixed header and nav */}
+      <div id="intro-text" className='flex flex-wrap mt-12 mx-16 border-2 border-green-400'>
         {topMenuItems.map((item) => (
           <div
             key={item}
@@ -11,14 +13,18 @@ const Introtext = ( {activeTopMenu , setActiveTopMenu , topMenuItems , content})
             {item}
           </div>
         ))}
-        </div>
-        <div id="content" className='flex-grow text-[70px] mx-16 border-2 border-green-400'>
-          {content[activeTopMenu].description.split('. ').map((text,index) => (
-            <h1 key={index} className=' font-title -mb-10'>{text.trim()}</h1>
-          ))}
-          </div>
-      </main>
-    )
+      </div>
+      {/* INTRO TEXT DIV  */}
+      <div id="content" className='flex-grow text-[70px]  mx-16 border-2 border-green-400'>
+        {content[activeTopMenu].description.split('. ').map((text, index) => (
+          <h1 key={index} className='font-title -mb-10 text-white'>
+            {text.trim()}
+            {activeTopMenu === 'Product Managers' && text.includes('vision') && <Arrow />}
+          </h1>
+        ))}
+      </div>
+    </div>
+  )
 }
 
-export default Introtext
+export default IntroText

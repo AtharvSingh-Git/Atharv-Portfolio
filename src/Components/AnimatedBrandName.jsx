@@ -17,13 +17,13 @@ const AnimatedBrandName = ({ firstName , lastName  }) => {
               <span
                 
                 key={index}
-                className={` inline-block transition-all duration-300 ease-in-out
+                className={`border-2 border-green-400 inline-block transition-all duration-300 ease-in-out
                   ${index === 0 ? '' : (isHovered ? 'opacity-100' : 'opacity-0')}
-                  ${index === 0 ? 'text-blue-400' : 'text-green-400'}`}
+                  ${index === 0 ? 'text-white' : 'text-green-400'}`}
                 style={{
                   transitionDelay: isHovered
-                    ? `${index * 0.05}s`
-                    : `${(fullName.length - index - 1) * 0.05}s`,
+                    ? `${index * 0.04}s`
+                    : `${(fullName.length - index - 1) * 0.04}s`,
                 }}
               >
                 {char}
