@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Nav from './Components/Nav';
 import IntroText from './Components/IntroText';
 import Projects from './Components/Projects';
+import Value from './Components/Value';
 
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
       </div>
       <div className='flex-1'>
         <Projects />
+      </div>
+      <div className='flex-1'>
+        <Value />
       </div>
     </div>
 
