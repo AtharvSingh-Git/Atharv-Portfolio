@@ -33,7 +33,7 @@ export default function ContactCards() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-black p-12 transition-colors duration-300 hover:bg-neutral-900 text-underline-offset-4 hover:underline"
+              className="group  bg-black p-12 transition-colors duration-300 hover:bg-neutral-900 text-underline-offset-4 hover:underline "
             >
               <div className="flex items-center justify-between mb-4">
                 <link.icon className="w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
@@ -41,7 +41,7 @@ export default function ContactCards() {
                   {(index + 1).toString().padStart(2, '0')}
                 </div> */}
               </div>
-              <h3 className="text-2xl mb-1">{link.name}</h3>
+              <h3 className="text-lg mb-1">{link.name}</h3>
 
             </a>
           ))}

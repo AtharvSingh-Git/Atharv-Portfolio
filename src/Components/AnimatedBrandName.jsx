@@ -12,7 +12,7 @@ const AnimatedBrandName = ({ firstName, lastName }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <h3 className="text-2xl font-bold">
+          <h3 className="text-2xl ">
             {fullName.split('').map((char, index) => (
               <span
 

@@ -21,7 +21,7 @@ const Contact = () => {
                 <div className="flex items-between justify-center p-8 text-white">
                     <img src="src\data\PXL_20241004_210039261 - Copy.jpg" alt="" />
                 </div>
-                <span id="Colophon" className=" border-2 border-red-500 m-8 flex items-between justify-center  text-white">
+                <span id="Colophon" className=" border-2 border-red-500 m-8  flex items-between justify-center  text-white">
                     Design & code by &nbsp;<a href="http://localhost:5173/"> <u>Atharv Singh</u></a>
                     <span id="copyright" className=" border-2 border-red-500 m-8 flex items-between justify-center  text-white">
                         &copy; 2024
