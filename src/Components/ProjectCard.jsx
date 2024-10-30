@@ -37,7 +37,7 @@ const ProjectCard = ({ title, description, time, website, github, tags, index, t
         ))}
       </div>
       <div className="relative">
-        <div className="absolute -top-[140px] right-0">
+        <div className="absolute -top-[175px] right-0">
           <p>{time}</p>
         </div>
       </div>

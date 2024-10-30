@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const AnimatedBrandName = ({ firstName , lastName  }) => {
+const AnimatedBrandName = ({ firstName, lastName }) => {
   const [isHovered, setIsHovered] = useState(false);
   const fullName = `${firstName} ${lastName}`;
 
@@ -15,18 +15,18 @@ const AnimatedBrandName = ({ firstName , lastName  }) => {
           <h3 className="text-2xl font-bold">
             {fullName.split('').map((char, index) => (
               <span
-                
+
                 key={index}
-                className={`border-2 border-green-400 inline-block transition-all duration-300 ease-in-out
+                className={` inline-block transition-all duration-300 ease-in-out
                   ${index === 0 ? '' : (isHovered ? 'opacity-100' : 'opacity-0')}
-                  ${index === 0 ? 'text-white' : 'text-green-400'}`}
+                  ${index === 0 ? 'text-white' : 'text-white'}`}
                 style={{
                   transitionDelay: isHovered
-                    ? `${index * 0.04}s`
-                    : `${(fullName.length - index - 1) * 0.04}s`,
+                    ? `${index * 0.02}s`
+                    : `${(fullName.length - index - 1) * 0.02}s`,
                 }}
               >
-                {char}
+                {char === ' ' ? '\u00A0' : char} {/* Adds a non-breaking space */}
               </span>
             ))}
           </h3>

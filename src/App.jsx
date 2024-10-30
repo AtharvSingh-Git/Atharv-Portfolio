@@ -5,7 +5,9 @@ import Nav from './Components/Nav';
 import IntroText from './Components/IntroText';
 import Projects from './Components/Projects';
 import Value from './Components/Value';
-
+import Background from './Components/Background';
+import About from './Components/About';
+import Contact from './Components/Contact';
 
 function App() {
   const menuItems = ['Intro' , 'Projects' , 'Value' , 'Background','About', 'Contact'];
@@ -20,10 +22,7 @@ function App() {
       description: "Whether it’s backend logic . or frontend flair,. I’ve got the skills to .   ship solid products. Let’s skip the buzzwords;). if you need someone who. gets stuff done,I’m ready."
     },
     'Monkey Typers': {
-      description: "I've led design teams at startups and big tech companies, helping to ship products that millions of people use every day."
-    },
-    'Product Designers': {
-      description: "I've worked on complex products and design systems, always with a focus on creating intuitive and delightful user experiences."
+      description: "Atharv_types here. 296 tests, 3+ hours. well spent (maybe),. and still coming back. for more..Race you?"
     },
     'Product Managers': {
       /* I bring a hands-on approach that hits every detail. */
@@ -58,6 +57,15 @@ function App() {
       </div>
       <div className='flex-1'>
         <Value />
+      </div>
+      <div className='flex-1'>
+        <Background />
+      </div>
+      <div className='flex-1'>
+        <About/>
+      </div>
+      <div className='flex-1'>
+        <Contact />
       </div>
     </div>
 

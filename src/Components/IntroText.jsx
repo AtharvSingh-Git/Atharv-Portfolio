@@ -7,7 +7,7 @@ const IntroText = ({ activeTopMenu, setActiveTopMenu, topMenuItems, content }) =
         {topMenuItems.map((item) => (
           <div
             key={item}
-            className={`font-medium cursor-pointer mr-8 mb-4 font-16px ${activeTopMenu === item ? 'font-bold' : 'opacity-50'}`}
+            className={`font-medium cursor-pointer mr-8 mb-4 font-16px ${activeTopMenu === item ? 'font-bold' : 'opacity-50'} hover:opacity-100`}
             onClick={() => setActiveTopMenu(item)}
           >
             {item}

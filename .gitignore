@@ -7,6 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+src/Components/ProjectCard.jsx
+src/Components/SmoothCodeEditorContact.tsx
+src/Components/DigitalCircuitContact.tsx
+src/Components/CodeEditorContact.tsx
+
+
 node_modules
 dist
 dist-ssr
@@ -22,3 +28,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+

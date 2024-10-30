@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { ProjectData } from '../data/data';
 import ProjectCard from './ProjectCard';
 import Lenis from '@studio-freight/lenis';
+import ExpandableCardDemo from './ExpandableProjectCard';
 
 const Projects = () => {
   const containerRef = useRef(null);
@@ -33,24 +34,14 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen pt-24 pl-[200px] border-2 border-red-500 text-white" ref={containerRef}>
-      <h1 className="ml-16 mb-32 font text-[60px] text-white">
-        Some of the Projects I've worked on
-      </h1>
-      <div className="relative">
-        {ProjectData.map((project, i) => (
-          <ProjectCard
-            key={`p_${i}`}
-            title={project.title}
-            description={project.description}
-            time={project.time}
-            website={project.website}
-            github={project.github}
-            tags={project.tags}
-            index={i}
-            totalCards={ProjectData.length}
-          />
-        ))}
+      <div id="pic" className='items-center justify-center'>
+        {/* <img src="src\data\afterIntro.bmp" alt=""  /> */}
       </div>
+      <h1 className="ml-16 font text-[60px] text-white">
+        Some of the Projects 
+      </h1>
+      <h1 className="ml-16 -mt-6 mb-32 font text-[60px] text-white">I've worked on</h1>
+      <ExpandableCardDemo />
     </div>
   );
 };
